@@ -8,22 +8,31 @@
       </div>
   </div>
 
-  <div class="panel panel-success">
+  <div class="panel panel-info">
+    <div class="panel-heading">Résultats</div>
+    <div class="panel-body">
+      <p><a routerLink="./admis">Admis</a></p>
+      <p><a routerLink="./nonadmis">Non admis</a></p>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!--<div class="panel panel-success">
     <div class="panel-heading">Liste des étudiants admis</div>
     <div class="panel-body">
       <ul *ngFor="let student of students" >
         <li *ngIf="student.moyenne > 10">{{student.name}} avec une moyenne de {{student.moyenne}}</li>
       </ul>
     </div>
-  </div>
+  </div>-->
 
-  <div class="panel panel-danger">
+  <!--<div class="panel panel-danger">
     <div class="panel-heading">Liste des étudiants non admis</div>
     <div class="panel-body">
       <ul *ngFor="let student of students" >
         <li *ngIf="student.moyenne < 10">{{student.name}} avec une moyenne de {{student.moyenne}}</li>
       </ul>
     </div>
-  </div>
+  </div>-->
 </div>
 

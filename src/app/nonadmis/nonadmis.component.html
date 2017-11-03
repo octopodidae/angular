@@ -1,0 +1,8 @@
+<div class="panel panel-danger">
+  <div class="panel-heading">Liste des étudiants non admis</div>
+  <div class="panel-body">
+    <ul *ngFor="let student of students" >
+      <li *ngIf="student.moyenne < 10">{{student.name}} avec une moyenne de {{student.moyenne}}</li>
+    </ul>
+  </div>
+</div>

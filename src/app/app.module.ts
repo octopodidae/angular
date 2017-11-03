@@ -14,10 +14,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ResourceComponent } from './resource/resource.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { AdmisComponent } from './admis/admis.component';
+import { NonadmisComponent } from './nonadmis/nonadmis.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'etudiants', component: EtudiantComponent },
+  { path: 'etudiants', component: EtudiantComponent,
+    children: [
+      { path: 'admis', component: AdmisComponent },
+      { path: 'nonadmis', component: NonadmisComponent }
+      ]},
   { path: 'fruits', component: FruitComponent },
   { path: 'resources', component: ResourceComponent },
   { path: 'aboutme', component: AboutmeComponent },
@@ -35,6 +41,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ResourceComponent,
     AboutmeComponent,
+    AdmisComponent,
+    NonadmisComponent,
 
   ],
   imports: [
